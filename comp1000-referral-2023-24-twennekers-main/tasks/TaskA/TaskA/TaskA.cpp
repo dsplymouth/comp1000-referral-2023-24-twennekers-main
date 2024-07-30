@@ -74,12 +74,13 @@ int main(int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
-    //Welcome message
-    cout << "TaskA (c)2024" << endl;
+    if (argc == 3) {
+        //Welcome message
+        cout << "TaskA (c)2024" << endl;
 
-    //BASIC EXAMPLE: Get parameters for the simple case
-    string fileName(argv[1]);
-    string searchString(argv[2]);
+        //BASIC EXAMPLE: Get parameters for the simple case
+        string fileName(argv[1]);
+        string searchString(argv[2]);
     bool is_regex{ false };
     // Check for -regex
     if (findArg(argc, argv, "-regex")) 
@@ -91,8 +92,10 @@ int main(int argc, char* argv[])
     if (is_regex)
         cout << " -regex";
     cout << endl;
-    
-    
+
+        //Confirm
+        cout << "TaskA " << fileName << " " << searchString << endl;
+
     // Make sure that the file lorum entered exists
     ifstream file_check(fileName);
     if (!file_check.good()) {
@@ -102,8 +105,13 @@ int main(int argc, char* argv[])
     // if not good (accessible) then return false
     file_check.close();
 
-    
-    
+
+    //EXAMPLE: Scan command line for -regex switch
+    int p = findArg(argc, argv, "-regex");
+    if (p) {
+        cout << "The search term is a regular expression. See https://www.softwaretestinghelp.com/regex-in-cpp/ for examples of how to do this " << endl;
+    }
+
     //**************************************************************
     //You could continue here :)
     //**************************************************************
@@ -115,7 +123,6 @@ int main(int argc, char* argv[])
 }
 
 // Find an argument on the command line and return the location
-int findArg(int argc, char* argv[], string pattern){
     for (int n = 1; n < argc; n++) {
         string s1(argv[n]);
         if (s1 == pattern) {
