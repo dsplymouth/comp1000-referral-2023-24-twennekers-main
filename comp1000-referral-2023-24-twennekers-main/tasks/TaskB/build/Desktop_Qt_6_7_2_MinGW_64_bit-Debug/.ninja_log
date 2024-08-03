@@ -1,0 +1,15 @@
+# ninja log v6
+5	448	7443758293214121	TaskB_autogen/timestamp	37f42532408b230e
+5	448	7443758293214121	TaskB_autogen/mocs_compilation.cpp	37f42532408b230e
+5	448	7443758293214121	C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/TaskB_autogen/timestamp	37f42532408b230e
+5	448	7443758293214121	C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/TaskB_autogen/mocs_compilation.cpp	37f42532408b230e
+452	1567	7443758293709947	CMakeFiles/TaskB.dir/TaskB_autogen/mocs_compilation.cpp.obj	e3af7cb1e77825ca
+455	1596	7443758293745137	CMakeFiles/TaskB.dir/main.cpp.obj	3aea4710923f772c
+458	1743	7443758293775071	CMakeFiles/TaskB.dir/mainwindow.cpp.obj	4d2c10cc0825ef51
+1744	1893	7443758306636706	TaskB.exe	4424d1b698426445
+20	252	7443759544308155	TaskB_autogen/timestamp	37f42532408b230e
+20	252	7443759544308155	TaskB_autogen/mocs_compilation.cpp	37f42532408b230e
+20	252	7443759544308155	C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/TaskB_autogen/timestamp	37f42532408b230e
+20	252	7443759544308155	C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/TaskB_autogen/mocs_compilation.cpp	37f42532408b230e
+253	1316	7443759546628710	CMakeFiles/TaskB.dir/mainwindow.cpp.obj	4d2c10cc0825ef51
+1317	1433	7443759557275987	TaskB.exe	4424d1b698426445

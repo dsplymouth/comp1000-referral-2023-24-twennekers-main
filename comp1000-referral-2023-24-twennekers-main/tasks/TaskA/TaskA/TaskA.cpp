@@ -3,49 +3,93 @@
 #include <vector>
 #include <sstream>
 #include <regex>
-#include <map>
 #include <string>
 using namespace std;
 
-//See bottom of main
-int findArg(int argc, char* argv[], string pattern);
-
-
-/*
- *
- * The user can launch application as follows:
- *
- * TaskA <filename> <search term> [-regex]
- * 
- * <database file>              REQUIRED. Specifies the file to search (required). This is ALWAYS the first parameter. The file must exist in order to be searched
- * <search term>                REQUIRED. The search term as either a single word or a regular expression. 
-                                This is a single word, made up of alpha-numeric characters only.
- * -regex                       OPTIONAL. If this flag is present, then the search term is a regular expression (as opposed to a single word). 
-                                It must be a valid regex expression.
- *
- * ****************
- * *** EXAMPLES ***
- * ****************
- *
- * TaskA lorum.txt comp1000             Searches for the string comp1000 in the file lorum.txt
- * TaskA lorum.txt "^(\\d)\\d" -regex   Searches the file lorum.txt for all patterns that match the regular expression "^(\\d)\\d" 
- * TaskA lorum.txt -regex "^(\\d)\\d"   Searches the file lorum.txt for all patterns that match the regular expression "^(\\d)\\d" 
- * TaskA lorum.txt                      Error - search expression provided
- * 
- * *************
- * *** NOTES ***
- * *************
- *
- * o Try to write your code such that is can be reused in other tasks.
- * o Code should be consistently indented and commented
- * o Consider error conditions, such as missing parameters or non-existent files
-*/
-int findArg(int argc, char* argv[], string pattern);
-void search_file(const string& filename, const string& search_term, bool is_regex);
+// Function declarations
+int findArg(int argc, char* argv[], const string& pattern);
+void search_file(const string& filename, const string& search_term, bool is_regex, vector<pair<int, int>>& matches, int& total_words);
 void display_file_content(const string& filename);
+void calculate_statistics(const vector<pair<int, int>>& matches, int total_words, double& percentage);
+void write_results_to_csv(const string& filename, const string& search_term, double percentage);
 
 
+int main(int argc, char* argv[])
+{
+    // Ensure the minimum number of arguments is met
+    if (argc < 3) {
+        cout << "Enter: TaskA <filename> <search term> [-regex]" << endl;
+        return EXIT_FAILURE;
+    }
+    if (argc > 4) {
+        cout << "Enter: TaskA <filename> <search term> [-regex]" << endl;
+        return EXIT_FAILURE;
+    }
 
+    // Welcome message
+    cout << "TaskA (c)2024" << endl;
+
+    // Check if the first argument is "TaskA"
+    int start_index = 1;
+    if (string(argv[1]) == "TaskA") {
+        start_index = 2;
+        
+    }
+
+    // Get parameters for the simple case
+    string fileName(argv[start_index]);
+    string searchString(argv[start_index + 1]);
+    bool is_regex = false;
+
+    // Check for -regex argument
+    if (findArg(argc, argv, "-regex"))
+        is_regex = true;
+
+    // Print out the command with optional -regex
+    cout << "TaskA " << fileName << " " << searchString;
+    if (is_regex)
+        cout << " -regex";
+    cout << endl;
+
+    // Ensure the file exists
+    ifstream file_check(fileName);
+    if (!file_check.good()) {
+        cerr << "File: " << fileName << " does not exist" << endl;
+        return EXIT_FAILURE;
+    }
+    file_check.close();
+
+    // Display the file content
+    display_file_content(fileName);
+
+    // Vector to store matches (line and word number)
+    vector<pair<int, int>> matches;
+    int total_words = 0;
+
+    // Search the file and count total words
+    search_file(fileName, searchString, is_regex, matches, total_words);
+
+    // Calculate and display statistics
+    double percentage = 0.0;
+    calculate_statistics(matches, total_words, percentage);
+
+    // Write results to CSV
+    write_results_to_csv(fileName, searchString, percentage);
+
+    return EXIT_SUCCESS;
+}
+
+// Find an argument on the command line and return the location
+int findArg(int argc, char* argv[], const string& pattern) {
+    for (int n = 1; n < argc; n++) {
+        if (pattern == argv[n]) {
+            return n;
+        }
+    }
+    return 0;
+}
+
+// Function to display the file content
 void display_file_content(const string& filename) {
     ifstream file(filename);
     string line;
@@ -62,82 +106,10 @@ void display_file_content(const string& filename) {
     }
 }
 
-int main(int argc, char* argv[])
-{
-    // argv is an array of strings, where argv[0] is the path to the program, argv[1] is the first parameter, ...
-    // argc is the number of strings in the array argv
-    // These are passed to the application as command line arguments
-    // Return value should be EXIT_FAILURE if the application exited with any form of error, or EXIT_SUCCESS otherwise
-    // Minimum number of entries is three so if less than three then incorrect entry
-    if (argc < 3) {
-        cout << "Enter: TaskA <filename> <search term> [-regex]" << endl;
-        return EXIT_FAILURE;
-    }
-
-    if (argc == 3) {
-        //Welcome message
-        cout << "TaskA (c)2024" << endl;
-
-        //BASIC EXAMPLE: Get parameters for the simple case
-        string fileName(argv[1]);
-        string searchString(argv[2]);
-    bool is_regex{ false };
-    // Check for -regex
-    if (findArg(argc, argv, "-regex")) 
-        is_regex = true;
-    
-
-    // Print out -regex as well as not
-    cout << "TaskA " << fileName << " " << searchString;
-    if (is_regex)
-        cout << " -regex";
-    cout << endl;
-
-        //Confirm
-        cout << "TaskA " << fileName << " " << searchString << endl;
-
-    // Make sure that the file lorum entered exists
-    ifstream file_check(fileName);
-    if (!file_check.good()) {
-        cerr << "File: " << fileName << " does not exist" << endl;
-        return EXIT_FAILURE;
-    }
-    // if not good (accessible) then return false
-    file_check.close();
-
-
-    //EXAMPLE: Scan command line for -regex switch
-    int p = findArg(argc, argv, "-regex");
-    if (p) {
-        cout << "The search term is a regular expression. See https://www.softwaretestinghelp.com/regex-in-cpp/ for examples of how to do this " << endl;
-    }
-
-    //**************************************************************
-    //You could continue here :)
-    //**************************************************************
-    display_file_content(fileName);
-    search_file(fileName, searchString, is_regex);
-
-
-    return EXIT_SUCCESS;
-}
-
-// Find an argument on the command line and return the location
-    for (int n = 1; n < argc; n++) {
-        string s1(argv[n]);
-        if (s1 == pattern) {
-            return n;
-        }
-    }
-    return 0;
-}
-
-
 // Function to search and display lines containing the search term
-void search_file(const string& file_name, const string& search_term, bool is_regex) {
-    ifstream file(file_name);
+void search_file(const string& filename, const string& search_term, bool is_regex, vector<pair<int, int>>& matches, int& total_words) {
+    ifstream file(filename);
     string line;
-    vector<pair<int, int>> matches;  // Pair of line number and word number
     int lineNumber = 1;
 
     if (file.is_open()) {
@@ -147,11 +119,14 @@ void search_file(const string& file_name, const string& search_term, bool is_reg
             int wordNumber = 1;
 
             while (iss >> word) {
+                total_words++;
+                bool found = false;
+
                 if (is_regex) {
                     try {
                         regex searchPattern(search_term);
                         if (regex_search(word, searchPattern)) {
-                            matches.emplace_back(lineNumber, wordNumber);
+                            found = true;
                         }
                     }
                     catch (const regex_error& e) {
@@ -161,26 +136,52 @@ void search_file(const string& file_name, const string& search_term, bool is_reg
                 }
                 else {
                     if (word.find(search_term) != string::npos) {
-                        matches.emplace_back(lineNumber, wordNumber);
+                        found = true;
                     }
+                }
+
+                if (found) {
+                    matches.emplace_back(lineNumber, wordNumber);
                 }
                 wordNumber++;
             }
             lineNumber++;
         }
         file.close();
-
-        if (!matches.empty()) {
-            cout << "String \"" << search_term << "\" found at:" << endl;
-            for (const auto& match : matches) {
-                cout << "Line " << match.first << ", Word " << match.second << endl;
-            }
-        }
-        else {
-            cout << "String \"" << search_term << "\" not found in the file." << endl;
-        }
     }
     else {
-        cerr << "Unable to open the file: " << file_name << endl;
+        cerr << "Unable to open the file: " << filename << endl;
+    }
+}
+
+// Function to calculate and display statistics
+
+void calculate_statistics(const vector<pair<int, int>>& matches, int total_words, double& percentage) {
+    if (total_words > 0) {
+        cout << "Matches found:" << endl;
+        for (const auto& match : matches) {
+            cout << "Line " << match.first << ", Word " << match.second << endl;
+        }
+        percentage = (static_cast<double>(matches.size()) / total_words) * 100;
+        cout << "Total matches: " << matches.size() << endl;
+        cout << "Total words: " << total_words << endl;
+        cout << "Percentage of matches: " << percentage << "%" << endl;
+    }
+    else {
+        cout << "No words found in the file." << endl;
+        percentage = 0.0;
+    }
+}
+
+// Function to write results to a CSV file
+void write_results_to_csv(const string& filename, const string& search_term, double percentage) {
+    ofstream csv_file("results.csv", ios::app);
+
+    if (csv_file.is_open()) {
+        csv_file << filename << "," << search_term << "," << percentage << "%" << endl;
+        csv_file.close();
+    }
+    else {
+        cerr << "Unable to open or create the results.csv file." << endl;
     }
 }
