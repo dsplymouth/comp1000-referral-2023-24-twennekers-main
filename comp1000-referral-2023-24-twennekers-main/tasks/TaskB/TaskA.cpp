@@ -3,7 +3,6 @@
 #include <vector>
 #include <sstream>
 #include <regex>
-#include "TaskA.h"
 #include <string>
 using namespace std;
 
@@ -34,7 +33,7 @@ int main(int argc, char* argv[])
     int start_index = 1;
     if (string(argv[1]) == "TaskA") {
         start_index = 2;
-        
+
     }
 
     // Get parameters for the simple case
