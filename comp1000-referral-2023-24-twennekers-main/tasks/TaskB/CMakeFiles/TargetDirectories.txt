@@ -1,0 +1,4 @@
+C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/CMakeFiles/TaskB.dir
+C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/CMakeFiles/INSTALL.dir
+C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/CMakeFiles/ALL_BUILD.dir
+C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/CMakeFiles/ZERO_CHECK.dir

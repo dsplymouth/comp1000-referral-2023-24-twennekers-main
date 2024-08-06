@@ -1,0 +1,3 @@
+C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-7qg8bg/CMakeFiles/cmTC_0444f.dir
+C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-7qg8bg/CMakeFiles/edit_cache.dir
+C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-7qg8bg/CMakeFiles/rebuild_cache.dir

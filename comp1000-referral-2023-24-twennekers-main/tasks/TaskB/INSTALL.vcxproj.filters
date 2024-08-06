@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\CMakeFiles\11057bb3f5f182fa941084fa6d907428\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{96E28FB2-524C-3065-97E3-798288ED73C6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

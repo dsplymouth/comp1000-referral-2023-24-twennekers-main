@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\include_Debug\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\include_Release\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\include_MinSizeRel\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\include_RelWithDebInfo\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\CMakeFiles\efd9731e9e4a6f6398eb28eea66eb787\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\mainwindow.ui" />
+    <None Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\autouic_Debug.stamp" />
+    <None Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\autouic_Release.stamp" />
+    <None Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="C:\Users\dille\Downloads\comp1000-referral-2023-24-twennekers-main\comp1000-referral-2023-24-twennekers-main\tasks\TaskB\TaskB_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{96E28FB2-524C-3065-97E3-798288ED73C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{63A2310D-5C47-3E97-80ED-434C3F07CBB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E68B791E-EFE2-32A7-A9A4-9FE004073A53}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

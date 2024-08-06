@@ -25,17 +25,17 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="searchLineEdit"/>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox">
+       <widget class="QCheckBox" name="regexCheckBox">
         <property name="text">
          <string>Regex</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="searchButton">
         <property name="text">
          <string>Search</string>
         </property>
@@ -44,14 +44,7 @@
      </layout>
     </item>
     <item>
-     <widget class="QTextEdit" name="textEdit"/>
-    </item>
-    <item alignment="Qt::AlignmentFlag::AlignLeft">
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>Exit</string>
-      </property>
-     </widget>
+     <widget class="QTextEdit" name="fileContextTextEdit"/>
     </item>
    </layout>
   </widget>
@@ -68,40 +61,23 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionOpen"/>
-    <addaction name="actionExit"/>
+    <addaction name="openFileAction"/>
+    <addaction name="closeFileAction"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionOpen">
+  <action name="openFileAction">
    <property name="text">
     <string>Open</string>
    </property>
   </action>
-  <action name="actionExit">
+  <action name="closeFileAction">
    <property name="text">
     <string>Exit</string>
    </property>
   </action>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>pushButton_2</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>43</x>
-     <y>568</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>101</x>
-     <y>562</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
