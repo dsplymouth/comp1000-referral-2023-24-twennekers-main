@@ -72,7 +72,7 @@ public:
         csvFile.close();
     }
 };
-// declarations are here apart from writetocsv
+// declarations are here apart from writetocsv which is in class
 int findArg(int argc, char* argv[], const string& pattern);
 void search_file(const string& filename, const string& search_term, bool is_regex, vector<pair<int, int>>& matches, int& total_words);
 void display_file_content(const string& filename);
