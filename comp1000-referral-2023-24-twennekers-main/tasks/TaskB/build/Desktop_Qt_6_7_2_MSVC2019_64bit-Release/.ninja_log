@@ -31,3 +31,11 @@
 27	139	7445737179252429	C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Release/TaskB_autogen/mocs_compilation.cpp	a405aefbdfb1cec0
 146	2234	7445737212878761	CMakeFiles/TaskB.dir/mainwindow.cpp.obj	9ac6b00e93ec4273
 2234	2345	7445737213870516	TaskB.exe	dbf30b2515639c51
+29	321	7447362516991434	TaskB_autogen/timestamp	a405aefbdfb1cec0
+29	321	7447362516991434	TaskB_autogen/mocs_compilation.cpp	a405aefbdfb1cec0
+29	321	7447362516991434	C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Release/TaskB_autogen/timestamp	a405aefbdfb1cec0
+29	321	7447362516991434	C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Release/TaskB_autogen/mocs_compilation.cpp	a405aefbdfb1cec0
+323	1167	7447362526055958	CMakeFiles/TaskB.dir/TaskB_autogen/mocs_compilation.cpp.obj	c0a0079bc1bbd7ba
+326	1170	7447362526101907	CMakeFiles/TaskB.dir/main.cpp.obj	f992031cb3dcbb4d
+330	1904	7447362533387169	CMakeFiles/TaskB.dir/mainwindow.cpp.obj	9ac6b00e93ec4273
+1904	2027	7447362534500780	TaskB.exe	dbf30b2515639c51

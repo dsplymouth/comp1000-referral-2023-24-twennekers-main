@@ -157,6 +157,6 @@ C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-refe
  mdp:C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h
  mdp:C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/mainwindow.h
-C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/main.cpp
 C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/mainwindow.cpp
  uic:ui_mainwindow.h
+C:/Users/dille/Downloads/comp1000-referral-2023-24-twennekers-main/comp1000-referral-2023-24-twennekers-main/tasks/TaskB/main.cpp
